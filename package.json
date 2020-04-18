@@ -1,0 +1,39 @@
+{
+  "name": "dipole-preact",
+  "version": "1.0.0",
+  "description": "Preact bindings for dipole reactive state management library",
+  "main": "./dist/index.js",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "exports": {
+    ".": {
+      "browser": "./dist/index.js",
+      "umd": "./dist/index.umd.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./hooks": {
+      "browser": "./hooks/dist/index.js",
+      "umd": "./hooks/dist/index.umd.js",
+      "require": "./hooks/dist/index.js",
+      "import": "./hooks/dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "microbundle --external dipole,preact,preact/hooks src/index.js && cd hooks && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0",
+    "dipole": "^1.0.0"
+  },
+  "keywords": [
+    "dipole",
+    "preact",
+    "reactive",
+    "observable",
+    "frp"
+  ],
+  "author": "Eugene Daragan",
+  "license": "MIT"
+}

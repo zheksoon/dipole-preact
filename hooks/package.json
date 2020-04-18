@@ -1,0 +1,17 @@
+{
+  "name": "dipole-preact-hooks",
+  "version": "1.0.0",
+  "description": "Preact hooks-based bindings for dipole observable state management library",
+  "private": true,
+  "main": "./dist/index.js",
+  "scripts": {
+  	"build": "microbundle --external dipole,preact,preact/hooks ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+  	"preact": "^10.0.0",
+  	"dipole": "^1.0.0"
+  },
+  "author": "Eugene Daragan",
+  "license": "MIT"
+}
